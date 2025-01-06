@@ -11,6 +11,14 @@ $background-color-tertiary: #303030;
 $btn-color: #2c3e50;
 $mui-primary: #1976d2;
 
+//widths
+$max-width-small-device: 431px;
+$max-width-medium-device: 854px;
+$max-width-large-device: 1281px;
+
+// heights
+$max-height-small-device: 650px;
+
 @mixin title {
   color: $app-primary-color;
   // text-decoration: underline;
