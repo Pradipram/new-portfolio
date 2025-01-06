@@ -22,8 +22,10 @@ const Skills = () => {
                     component="img"
                     image={skill.image}
                     alt={skill.title}
-                    height={100}
-                    width={100}
+                    // height={100}
+                    // width={100}
+                    height={50}
+                    width={50}
                     sx={{ objectFit: "contain", margin: "5px 0px" }}
                   />
                 )}

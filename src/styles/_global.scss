@@ -44,6 +44,12 @@ $max-height-small-device: 650px;
   border-radius: 5px;
   flex-wrap: wrap;
   margin: 10px;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $max-width-medium-device) {
+    width: 100%;
+  }
 }
 
 @mixin card {
