@@ -1,0 +1,21 @@
+@import "../../styles/global";
+
+.experienceBody {
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .role {
+    text-align: center;
+  }
+
+  .duration {
+    color: $font-secondary;
+  }
+
+  .description {
+    color: $body-text-color-tertiary;
+  }
+}

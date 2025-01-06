@@ -8,20 +8,41 @@ import {
   Projects,
   Skills,
 } from "./pages";
+import { useEffect, useState } from "react";
 
 // import { Footer } from "@p__radip/react-footer";
 
 function App() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 431);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/education" element={<Education />} />
+          <Route
+            path="/education"
+            element={<Education isSmallScreen={isSmallScreen} />}
+          />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
+          <Route
+            path="/experience"
+            element={<Experience isSmallScreen={isSmallScreen} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         {/* <Footer websiteName="pradip portfolio" /> */}

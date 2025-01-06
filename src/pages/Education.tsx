@@ -8,24 +8,14 @@ import TimelineDot from "@mui/lab/TimelineDot";
 
 import { educationStyle } from "../styles";
 import { educationDetails } from "../assets";
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+// import { useEffect, useState } from "react";
 
-export default function CustomizedTimeline() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+interface EducationProps {
+  isSmallScreen: boolean;
+}
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 431);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+const Education: React.FC<EducationProps> = ({ isSmallScreen }) => {
   return (
     <div className={educationStyle.education}>
       <div className={educationStyle.timeline}>
@@ -85,4 +75,9 @@ export default function CustomizedTimeline() {
       </div>
     </div>
   );
-}
+};
+Education.propTypes = {
+  isSmallScreen: PropTypes.bool.isRequired,
+};
+
+export default Education;
