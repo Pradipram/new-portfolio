@@ -14,9 +14,16 @@ const Home = () => {
 
   const calculatePosition = (index: number, total: number) => {
     const angle = (index / total) * 2 * Math.PI;
-    const x = centerX + radius * Math.cos(angle) - 20;
-    const y = centerY + radius * Math.sin(angle) - 20;
-    return { left: `${x}px`, top: `${y}px` };
+    const x = centerX + radius * Math.cos(angle) - 20; // Adjust for element width
+    const y = centerY + radius * Math.sin(angle) - 20; // Adjust for element height
+    return { left: `${x}px`, top: `${y}px`, angle };
+  };
+
+  const getTooltipPlacement = (angle: number) => {
+    if (angle >= 0 && angle < Math.PI / 2) return "right";
+    if (angle >= Math.PI / 2 && angle < Math.PI) return "bottom";
+    if (angle >= Math.PI && angle < (3 * Math.PI) / 2) return "left";
+    return "top";
   };
 
   return (
@@ -24,7 +31,11 @@ const Home = () => {
       <div className={homeStyle.circle}>
         <img src={profile} alt="profile" className={homeStyle.profileImage} />
         {homeDetails.map((detail, index) => {
-          const position = calculatePosition(index, homeDetails.length);
+          const { left, top, angle } = calculatePosition(
+            index,
+            homeDetails.length,
+          );
+          const placement = getTooltipPlacement(angle);
           return (
             <a
               // className={homeStyle[detail.className]}
@@ -33,11 +44,11 @@ const Home = () => {
               {...(detail.externalLink
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              style={position}
+              style={{ left, top }}
             >
               <Tooltip
                 title={detail.title}
-                placement={detail.TooltipPlacement}
+                placement={placement}
                 arrow
                 slots={{ transition: Zoom }}
                 componentsProps={{
