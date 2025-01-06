@@ -6,36 +6,53 @@ import { Zoom } from "@mui/material";
 import { homeDetails } from "../assets";
 
 const Home = () => {
+  // const centerX = 238;
+  const centerX = 255;
+  // const centerY = 113.8;
+  const centerY = 135;
+  const radius = 170;
+
+  const calculatePosition = (index: number, total: number) => {
+    const angle = (index / total) * 2 * Math.PI;
+    const x = centerX + radius * Math.cos(angle) - 20;
+    const y = centerY + radius * Math.sin(angle) - 20;
+    return { left: `${x}px`, top: `${y}px` };
+  };
+
   return (
     <div className={homeStyle.App}>
       <div className={homeStyle.circle}>
         <img src={profile} alt="profile" className={homeStyle.profileImage} />
-        {homeDetails.map((detail) => (
-          <a
-            className={homeStyle[detail.className]}
-            href={detail.href}
-            key={detail.id}
-            {...(detail.externalLink
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
-          >
-            <Tooltip
-              title={detail.title}
-              placement={detail.TooltipPlacement}
-              arrow
-              slots={{ transition: Zoom }}
-              componentsProps={{
-                tooltip: {
-                  sx: {
-                    fontSize: "1.2rem",
-                  },
-                },
-              }}
+        {homeDetails.map((detail, index) => {
+          const position = calculatePosition(index, homeDetails.length);
+          return (
+            <a
+              // className={homeStyle[detail.className]}
+              href={detail.href}
+              key={detail.id}
+              {...(detail.externalLink
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              style={position}
             >
-              <detail.icon style={{ height: 30, width: 30 }} />
-            </Tooltip>
-          </a>
-        ))}
+              <Tooltip
+                title={detail.title}
+                placement={detail.TooltipPlacement}
+                arrow
+                slots={{ transition: Zoom }}
+                componentsProps={{
+                  tooltip: {
+                    sx: {
+                      fontSize: "1.2rem",
+                    },
+                  },
+                }}
+              >
+                <detail.icon style={{ height: 30, width: 30 }} />
+              </Tooltip>
+            </a>
+          );
+        })}
       </div>
       <div className={homeStyle.info}>
         {/* <div className={homeStyle.name}>

@@ -50,56 +50,6 @@ body {
       background-color: $font-secondary;
     }
   }
-
-  .about {
-    left: 240px;
-    top: -40px;
-  }
-
-  .education {
-    left: 145px;
-    top: -10px;
-  }
-
-  .skills {
-    left: 333px;
-    top: -6px;
-  }
-
-  .projects {
-    left: 93px;
-    top: 67px;
-  }
-
-  .experience {
-    right: 76px;
-    top: 67px;
-  }
-
-  .resume {
-    left: 90px;
-    top: 151px;
-  }
-
-  .email {
-    right: 72px;
-    top: 144px;
-  }
-
-  .github {
-    bottom: 36px;
-    left: 130px;
-  }
-
-  .linkedin {
-    bottom: 39px;
-    right: 108px;
-  }
-
-  .x {
-    left: 246px;
-    bottom: -7px;
-  }
 }
 
 .info {
@@ -109,34 +59,34 @@ body {
   justify-content: center;
   flex-direction: column;
   // background-color: red;
-  margin: 10px;
-}
+  margin: 20px;
 
-.name {
-  // color: #fff;
-  font-size: 40px;
-  font-weight: normal;
-  color: $heading-text-secondary;
-  margin-top: 50px;
-  margin-bottom: 0px;
-  // padding: 0px;
-  // background-color: yellow;
-  // padding-top: 2.5em;
-}
+  .name {
+    // color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    color: $heading-text-secondary;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    // padding: 0px;
+    // background-color: yellow;
+    // padding-top: 2.5em;
+  }
 
-.description {
-  // padding-top: 0.5em;
-  font-size: 1.2em;
-  // color: #ccc;
-  margin: 0px;
-  padding: 0px;
-  color: $body-text-color-secondary;
-  // background-color: red;
-}
+  .description {
+    // padding-top: 0.5em;
+    font-size: 1.2em;
+    // color: #ccc;
+    margin: 0px;
+    padding: 0px;
+    color: $body-text-color-secondary;
+    // background-color: red;
+  }
 
-.interest {
-  margin: 0px;
-  padding: 0px;
-  color: white;
-  font-size: 1.5em;
+  .interest {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 1.5em;
+  }
 }

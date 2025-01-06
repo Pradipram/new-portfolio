@@ -13,7 +13,6 @@ interface HomeDetail {
   title: string;
   href: string;
   icon: IconType;
-  className: string;
   externalLink: boolean;
   TooltipPlacement: TooltipProps["placement"];
 }
@@ -24,7 +23,6 @@ export const homeDetails: HomeDetail[] = [
     title: "About Me",
     href: "/about",
     icon: AiOutlineInfo,
-    className: "about",
     externalLink: false,
     TooltipPlacement: "top",
   },
@@ -33,7 +31,6 @@ export const homeDetails: HomeDetail[] = [
     title: "Education",
     href: "/education",
     icon: MdCastForEducation,
-    className: "education",
     externalLink: false,
     TooltipPlacement: "left",
   },
@@ -42,7 +39,6 @@ export const homeDetails: HomeDetail[] = [
     title: "Skills",
     href: "/skills",
     icon: GiSkills,
-    className: "skills",
     externalLink: false,
     TooltipPlacement: "right",
   },
@@ -51,7 +47,6 @@ export const homeDetails: HomeDetail[] = [
     title: "Projects",
     href: "/projects",
     icon: GrProjects,
-    className: "projects",
     externalLink: false,
     TooltipPlacement: "left",
   },
@@ -60,7 +55,6 @@ export const homeDetails: HomeDetail[] = [
     title: "experience",
     href: "/experience",
     icon: HiOfficeBuilding,
-    className: "experience",
     externalLink: false,
     TooltipPlacement: "right",
   },
@@ -69,7 +63,6 @@ export const homeDetails: HomeDetail[] = [
     title: "Resume",
     href: "https://drive.google.com/file/d/1u3jXqgsSLEOdkGcTozgSqsJMB3jf9pqS/view?usp=sharing",
     icon: SiReaddotcv,
-    className: "resume",
     externalLink: true,
     TooltipPlacement: "left",
   },
@@ -78,7 +71,6 @@ export const homeDetails: HomeDetail[] = [
     title: "Email Me",
     href: `mailto:pradipramnawa@gmail.com?subject=${encodeURIComponent("Hello from Portfolio")}&body=${encodeURIComponent("Hi, I saw your portfolio and would like to connect!")}`,
     icon: MdMail,
-    className: "email",
     externalLink: true,
     TooltipPlacement: "right",
   },
@@ -87,7 +79,6 @@ export const homeDetails: HomeDetail[] = [
     title: "Github",
     href: "https://github.com/Pradipram",
     icon: FaGithub,
-    className: "github",
     externalLink: true,
     TooltipPlacement: "left",
   },
@@ -96,7 +87,6 @@ export const homeDetails: HomeDetail[] = [
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/pradip-ram-0bbb73222/",
     icon: FaLinkedinIn,
-    className: "linkedin",
     externalLink: true,
     TooltipPlacement: "right",
   },
@@ -105,7 +95,6 @@ export const homeDetails: HomeDetail[] = [
     title: "X",
     href: "https://x.com/P__radip",
     icon: FaXTwitter,
-    className: "x",
     externalLink: true,
     TooltipPlacement: "bottom",
   },
