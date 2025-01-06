@@ -69,7 +69,7 @@ export const homeDetails: HomeDetail[] = [
   {
     id: 7,
     title: "Email Me",
-    href: `mailto:pradipramnawa@gmail.com?subject=${encodeURIComponent("Hello from Portfolio")}&body=${encodeURIComponent("Hi, I saw your portfolio and would like to connect!")}`,
+    href: `mailto:pradipramnawa@gmail.com?subject=${encodeURIComponent("Hello from Portfolio Website")}&body=${encodeURIComponent("Hi Pradip,\n\nI saw your portfolio and would like to connect!\n\nThanks,\n[Your name]")}`,
     icon: MdMail,
     externalLink: true,
     TooltipPlacement: "right",

@@ -38,7 +38,6 @@ const Home = () => {
           const placement = getTooltipPlacement(angle);
           return (
             <a
-              // className={homeStyle[detail.className]}
               href={detail.href}
               key={detail.id}
               {...(detail.externalLink
