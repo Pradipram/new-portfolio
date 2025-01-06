@@ -1,0 +1,33 @@
+@import "./global";
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    // @include title;
+    // background-color: #fffd99;
+    color: $heading-text-secondary;
+  }
+
+  .skillContainer {
+    // min-width: 60%;
+    // height: 60vh;
+    @include container;
+    width: 850px;
+
+    .skillCard {
+      @include card;
+      width: 150px;
+      //   height: 200px;
+
+      .icon {
+        // background-color: red;
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+}

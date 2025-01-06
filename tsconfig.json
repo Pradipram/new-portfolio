@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                      // Modern JavaScript version
+    "module": "ESNext",                   // Use ESNext module system
+    "jsx": "react-jsx",                   // For React JSX support
+    "strict": true,                       // Enable all strict type-checking options
+    "moduleResolution": "Node",           // Resolve modules like Node.js
+    "esModuleInterop": true,              // Enable ES Module interoperability
+    "skipLibCheck": true,                 // Skip type-checking for libraries
+    "forceConsistentCasingInFileNames": true // Ensure file name casing consistency
+  },
+  "include": ["src"],                     // Include the `src` directory
+  "exclude": ["node_modules"]             // Exclude the `node_modules` directory
+}

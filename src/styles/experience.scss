@@ -1,0 +1,42 @@
+@import "./global";
+
+.heading {
+  color: $heading-text-secondary;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+  }
+}
+
+.tech-stack {
+  //   display: flex;
+  gap: 8px;
+  //   flex-wrap: wrap;
+  margin-top: 16px;
+
+  .MuiChip-root {
+    background: #f0f0f0;
+    &:hover {
+      background: #e0e0e0;
+    }
+  }
+}
+
+// .description {
+//   list-style: none;
+// }

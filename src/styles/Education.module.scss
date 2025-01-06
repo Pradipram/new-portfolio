@@ -1,0 +1,47 @@
+@import "./global";
+
+.education {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .timeline {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 60vw;
+    background-color: $font-color;
+    border-radius: 10px;
+    margin: 10px;
+
+    h1 {
+      @include title;
+      // background-color: red;
+      text-align: center;
+    }
+
+    .date {
+      color: $font-secondary;
+    }
+
+    .icon {
+      // background-color: red;
+      @include icon;
+    }   
+
+    .content {
+      background-color: $font-secondary;
+      box-shadow:
+        rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      border-radius: 10px;
+      padding: 5px 20px;
+    }
+    h2,
+    h3 {
+      padding: 0px;
+      margin: 0px;
+      color: #10151f;
+    }
+  }
+}

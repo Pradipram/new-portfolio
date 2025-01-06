@@ -1,0 +1,50 @@
+$font-color: #474747;
+$font-secondary: rgb(185, 186, 194);
+$body-text-color: rgb(185, 193, 239);
+$body-text-color-secondary: rgba(255, 255, 255, 0.616);
+$app-primary-color: #051e2a;
+$heading-text-secondary: #fffd99;
+// $background-color-primary: #262626;
+$background-color-primary: #14181b;
+$background-color-secondary: #1e1e1e;
+$background-color-tertiary: #303030;
+$btn-color: #2c3e50;
+$mui-primary: #1976d2;
+
+@mixin title {
+  color: $app-primary-color;
+  // text-decoration: underline;
+}
+
+@mixin body-text {
+  color: $font-secondary;
+}
+
+@mixin icon {
+  font-size: 2rem;
+  color: $font-color;
+}
+
+@mixin container {
+  background-color: $background-color-primary;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 10px;
+  display: flex;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+@mixin card {
+  margin: 10px;
+  background-color: $background-color-secondary;
+  text-align: center;
+  color: $font-secondary;
+
+  &:hover {
+    background-color: $background-color-tertiary;
+  }
+}
