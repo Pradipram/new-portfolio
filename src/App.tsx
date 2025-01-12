@@ -17,7 +17,8 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 431);
+      // console.log(window.innerWidth);
+      setIsSmallScreen(window.innerWidth <= 475);
     };
 
     handleResize();
@@ -31,7 +32,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isSmallScreen={isSmallScreen} />} />
           <Route path="/about" element={<About />} />
           <Route
             path="/education"

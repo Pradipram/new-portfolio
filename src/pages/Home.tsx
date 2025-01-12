@@ -4,13 +4,16 @@ import Tooltip from "@mui/material/Tooltip";
 import { Zoom } from "@mui/material";
 
 import { homeDetails } from "../assets";
+import { FC } from "react";
 
-const Home = () => {
-  // const centerX = 238;
-  const centerX = 255;
-  // const centerY = 113.8;
-  const centerY = 135;
-  const radius = 170;
+interface HomeProps {
+  isSmallScreen: boolean;
+}
+
+const Home: FC<HomeProps> = ({ isSmallScreen }) => {
+  const centerX = isSmallScreen ? 190 : 255;
+  const centerY = isSmallScreen ? 110 : 135;
+  const radius = isSmallScreen ? 150 : 170;
 
   const calculatePosition = (index: number, total: number) => {
     const angle = (index / total) * 2 * Math.PI;
@@ -28,6 +31,9 @@ const Home = () => {
 
   return (
     <div className={homeStyle.App}>
+      {/* <h1>
+        {centerX} - {centerY}
+      </h1> */}
       <div className={homeStyle.circle}>
         <img src={profile} alt="profile" className={homeStyle.profileImage} />
         {homeDetails.map((detail, index) => {

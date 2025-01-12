@@ -6,21 +6,19 @@ body {
 
 .App {
   width: 500px;
-  // height: 300px;
   position: absolute;
   left: 50%;
-  // left: 60%;
   top: 40%;
   margin: -150px 0 0 -250px;
   font-family: avenir-web, Avenir;
-  // background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
 
-  @media (max-width: 539px) {
+  @media (max-width: $max-width-small-device) {
     left: 65%;
+    width: 374px;
+    // background-color: rgb(215, 172, 172);
   }
 
   @media (max-height: 600px) {
@@ -44,6 +42,11 @@ body {
     border-radius: 50%;
     border: 1px solid white;
     object-fit: cover;
+
+    @media (max-width: $max-width-small-device) {
+      width: 200px;
+      height: 200px;
+    }
   }
 
   a {
