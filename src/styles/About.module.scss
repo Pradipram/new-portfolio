@@ -31,12 +31,20 @@
     flex-direction: column;
     justify-content: center;
 
+    h1 {
+      // background-color: red;
+      margin-bottom: 0;
+      margin-left: 10px;
+    }
+
     .text {
-      background-color: white;
-      color: $font-color;
+      // background-color: white;
+      // color: $font-color;
+      margin-top: 0;
+      color: white;
       padding: 10px;
       border-radius: 10px;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
     .social {
@@ -58,15 +66,23 @@
 
   @media (max-width: $max-width-medium-device) {
     width: 100%;
+    min-width: 50%;
     flex-direction: column;
     align-items: center;
+    // background-color: white;
+    margin-top: 0px;
 
     .aboutContent {
+      // background-color: red;
+      width: 100%;
       h1 {
         text-align: center;
         margin-top: 0px;
       }
 
+      .text {
+        text-align: center;
+      }
       .social {
         display: flex;
         align-items: center;
