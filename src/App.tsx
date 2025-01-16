@@ -10,8 +10,6 @@ import {
 } from "./pages";
 import { useEffect, useState } from "react";
 
-// import { Footer } from "@p__radip/react-footer";
-
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -46,7 +44,6 @@ function App() {
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        {/* <Footer websiteName="pradip portfolio" /> */}
       </Router>
     </div>
   );
