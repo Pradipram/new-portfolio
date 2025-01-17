@@ -15,6 +15,7 @@ import { toast } from "react-toastify";
 import { SocialActivity } from "../../assets";
 
 const InputField = styled(TextField)({
+  // margin: "10px",
   "& .MuiOutlinedInput-root": {
     backgroundColor: "transparent",
     "& fieldset": {
@@ -128,20 +129,22 @@ const Contact = () => {
             </Button>
           </div>
         </div>
+        <div className="separator"></div>
         <div className="socialConnect">
-          <div>
-            <Typography variant="h5" sx={{ textAlign: "end" }}>
+          <div className="socialConnectItem">
+            <Typography variant="h5" className="socialConnectItemHeading">
               Email
             </Typography>
             <Typography sx={{ color: "#1976d2" }}>
               pradipramnawa@gamil.com
             </Typography>
           </div>
-          <div>
-            <Typography variant="h5" sx={{ textAlign: "end" }}>
+          <div className="socialConnectItem">
+            <Typography variant="h5" className="socialConnectItemHeading">
               Schedule a Meeting
             </Typography>
-            <Stack direction="row" justifyContent="flex-end">
+            {/* <Stack direction="row" justifyContent="flex-end"> */}
+            <Stack direction="row" className="stack">
               <Button
                 variant="outlined"
                 href={`mailto:pradipramnawa@gmail.com?subject=${encodeURIComponent("I want to schedule a meeting with you")}&body=${encodeURIComponent("Hi Pradip,\n\nI have seen your portfolio and want to meet you,\nPlease tell me your availability,\n\nThanks,\n[Your Name]")}`}
@@ -152,11 +155,11 @@ const Contact = () => {
               </Button>
             </Stack>
           </div>
-          <div>
-            <Typography variant="h5" sx={{ textAlign: "end" }}>
+          <div className="socialConnectItem">
+            <Typography variant="h5" className="socialConnectItemHeading">
               Social
             </Typography>
-            <Stack direction="row" justifyContent="flex-end">
+            <Stack direction="row" className="stack">
               <Stack
                 direction="row"
                 divider={
@@ -167,13 +170,12 @@ const Contact = () => {
                   />
                 }
                 spacing={2}
-                sx={{
-                  width: "70%",
-                  flexWrap: "wrap",
-                  // backgroundColor: "red",
-                  justifyContent: "end",
-                  // alignItems: "end",
-                }}
+                className="socialIconsContainer"
+                // sx={{
+                //   width: "70%",
+                //   flexWrap: "wrap",
+                //   justifyContent: "end",
+                // }}
               >
                 {SocialActivity.map((social) => (
                   <a
