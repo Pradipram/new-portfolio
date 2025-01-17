@@ -1,0 +1,58 @@
+@import "../../styles//global";
+
+.contactUs {
+  //   background-color: black;
+  color: white;
+  width: 70vw;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+  }
+
+  .contactForm {
+    // background-color: red;
+    display: flex;
+
+    .directConnect {
+      width: 50%;
+      //   background-color: red;
+      margin: 10px;
+      padding: 10px;
+
+      h2 {
+        color: $mui-primary;
+      }
+
+      .description {
+        color: $body-text-color;
+      }
+
+      .buttons {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        // background-color: red;
+      }
+
+      .emailLink {
+        // color: rgb(60, 92, 233);
+        color: $body-text-color;
+        &:hover {
+          color: $body-text-color-secondary;
+        }
+      }
+    }
+
+    .socialConnect {
+      width: 50%;
+      // background-color: red;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-around;
+    }
+  }
+}

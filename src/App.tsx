@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   About,
+  Contact,
   Education,
   Experience,
   Home,
@@ -9,6 +10,7 @@ import {
   Skills,
 } from "./pages";
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -42,9 +44,11 @@ function App() {
             path="/experience"
             element={<Experience isSmallScreen={isSmallScreen} />}
           />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </div>
   );
 }

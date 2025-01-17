@@ -1,6 +1,10 @@
-import { TooltipProps } from "@mui/material";
+// import { TooltipProps } from "@mui/material";
 import { AiOutlineInfo } from "react-icons/ai";
-import { MdCastForEducation, MdMail } from "react-icons/md";
+import {
+  MdCastForEducation,
+  MdMail,
+  MdOutlineContactPhone,
+} from "react-icons/md";
 import { IconType } from "react-icons";
 import { GiSkills } from "react-icons/gi";
 import { GrProjects } from "react-icons/gr";
@@ -14,7 +18,7 @@ interface HomeDetail {
   href: string;
   icon: IconType;
   externalLink: boolean;
-  TooltipPlacement: TooltipProps["placement"];
+  // TooltipPlacement: TooltipProps["placement"];
 }
 
 export const homeDetails: HomeDetail[] = [
@@ -24,7 +28,7 @@ export const homeDetails: HomeDetail[] = [
     href: "/about",
     icon: AiOutlineInfo,
     externalLink: false,
-    TooltipPlacement: "top",
+    // TooltipPlacement: "top",
   },
   {
     id: 2,
@@ -32,7 +36,7 @@ export const homeDetails: HomeDetail[] = [
     href: "/education",
     icon: MdCastForEducation,
     externalLink: false,
-    TooltipPlacement: "left",
+    // TooltipPlacement: "left",
   },
   {
     id: 3,
@@ -40,7 +44,7 @@ export const homeDetails: HomeDetail[] = [
     href: "/skills",
     icon: GiSkills,
     externalLink: false,
-    TooltipPlacement: "right",
+    // TooltipPlacement: "right",
   },
   {
     id: 4,
@@ -48,7 +52,7 @@ export const homeDetails: HomeDetail[] = [
     href: "/projects",
     icon: GrProjects,
     externalLink: false,
-    TooltipPlacement: "left",
+    // TooltipPlacement: "left",
   },
   {
     id: 5,
@@ -56,7 +60,7 @@ export const homeDetails: HomeDetail[] = [
     href: "/experience",
     icon: HiOfficeBuilding,
     externalLink: false,
-    TooltipPlacement: "right",
+    // TooltipPlacement: "right",
   },
   {
     id: 6,
@@ -64,7 +68,7 @@ export const homeDetails: HomeDetail[] = [
     href: "https://drive.google.com/file/d/1u3jXqgsSLEOdkGcTozgSqsJMB3jf9pqS/view?usp=sharing",
     icon: SiReaddotcv,
     externalLink: true,
-    TooltipPlacement: "left",
+    // TooltipPlacement: "left",
   },
   {
     id: 7,
@@ -72,7 +76,7 @@ export const homeDetails: HomeDetail[] = [
     href: `mailto:pradipramnawa@gmail.com?subject=${encodeURIComponent("Hello from Portfolio Website")}&body=${encodeURIComponent("Hi Pradip,\n\nI saw your portfolio and would like to connect!\n\nThanks,\n[Your name]")}`,
     icon: MdMail,
     externalLink: true,
-    TooltipPlacement: "right",
+    // TooltipPlacement: "right",
   },
   {
     id: 8,
@@ -80,7 +84,7 @@ export const homeDetails: HomeDetail[] = [
     href: "https://github.com/Pradipram",
     icon: FaGithub,
     externalLink: true,
-    TooltipPlacement: "left",
+    // TooltipPlacement: "left",
   },
   {
     id: 9,
@@ -88,7 +92,7 @@ export const homeDetails: HomeDetail[] = [
     href: "https://www.linkedin.com/in/pradip-ram-0bbb73222/",
     icon: FaLinkedinIn,
     externalLink: true,
-    TooltipPlacement: "right",
+    // TooltipPlacement: "right",
   },
   {
     id: 10,
@@ -96,7 +100,14 @@ export const homeDetails: HomeDetail[] = [
     href: "https://x.com/P__radip",
     icon: FaXTwitter,
     externalLink: true,
-    TooltipPlacement: "bottom",
+    // TooltipPlacement: "bottom",
+  },
+  {
+    id: 11,
+    title: "Contact Us",
+    href: "/contact",
+    icon: MdOutlineContactPhone,
+    externalLink: false,
   },
 ];
 
