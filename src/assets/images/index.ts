@@ -17,18 +17,18 @@ export { default as CppImage } from "./c.912x1024.png";
 export { default as typescriptImage } from "./typescript-icon.1024x1024.png";
 export { default as expressJsImage } from "./icons8-express-js-500.png";
 export { default as mongoDbImage } from "./icons8-mongodb-a-cross-platform-document-oriented-database-program-100.png";
-export {default as PrismaImage} from "./prism.png";
-export { default as postgresImage48} from "./icons8-postgresql-48.png";
+export { default as PrismaImage } from "./prism.png";
+export { default as postgresImage48 } from "./icons8-postgresql-48.png";
 export { default as postgresImage480 } from "./icons8-postgresql-480.png";
-export {default as neonImage} from "./neon.png";
+export { default as neonImage } from "./neon.png";
 export { default as nextJsIcon480 } from "./icons8-nextjs-480.png";
-export { default as nextJsIconWhite480} from "./icons8-nextjs-white-480.png";
+export { default as nextJsIconWhite480 } from "./icons8-nextjs-white-480.png";
 export { default as tailwindcssIconWhite384 } from "./icons8-tailwind-css-384.png";
 
 //projects images
 export { default as elitbazzarImage } from "./elitebazzar.png";
 export { default as writeStreamImage } from "./write-stream.png";
-export {default as codeSnippetsImage} from "./code-snippets.png";
+export { default as codeSnippetsImage } from "./code-snippets.png";
 
 //experiences
 export { default as veoliaLogo } from "./veolia_water_technologies_and_solutions_logo.jpeg";

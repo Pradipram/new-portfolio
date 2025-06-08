@@ -4,15 +4,37 @@ import {
   mongoDbImage,
   writeStreamImage,
   codeSnippetsImage,
-  ReactIocn, nodeJsIcon, 
+  ReactIocn,
+  nodeJsIcon,
   PrismaImage,
   postgresImage480,
   neonImage,
   nextJsIconWhite480,
-  tailwindcssIconWhite384
+  tailwindcssIconWhite384,
 } from "../images";
 
-export const projectData = [
+export interface ProjectLinkInterface {
+  name: string;
+  url: string;
+}
+
+export interface ProjectSkillInterface {
+  src: string;
+  name: string;
+}
+
+export interface ProjectInterface {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  links: ProjectLinkInterface[];
+  skills: ProjectSkillInterface[];
+}
+
+export type ProjectData = ProjectInterface[];
+
+export const projectData: ProjectData = [
   {
     id: 1,
     name: "EliteBazzar",
@@ -58,28 +80,26 @@ export const projectData = [
   {
     id: 3,
     name: "code-snippets",
-    description: "A web application that allows users to add, edit, and manage code snippets efficiently.",
+    description:
+      "A web application that allows users to add, edit, and manage code snippets efficiently.",
     image: codeSnippetsImage,
     links: [
       {
         name: "Github",
-        url: "https://github.com/Pradipram/code-snippets"
+        url: "https://github.com/Pradipram/code-snippets",
       },
       {
         name: "Live",
-        url: "https://code-snippets-pradiprams-projects.vercel.app/"
-      }
+        url: "https://code-snippets-pradiprams-projects.vercel.app/",
+      },
     ],
     skills: [
-      {src: nextJsIconWhite480, name: "Next.js"},
-      {src: ReactIocn, name: "React"},
-      {src: PrismaImage, name: "Prisma"},
+      { src: nextJsIconWhite480, name: "Next.js" },
+      { src: ReactIocn, name: "React" },
+      { src: PrismaImage, name: "Prisma" },
       { src: postgresImage480, name: "PostgreSQL" },
       { src: neonImage, name: "Neon" },
-      {
-        src: tailwindcssIconWhite384,
-        name: "Tailwind CSS"
-      }
-    ]
-  }
+      { src: tailwindcssIconWhite384, name: "Tailwind CSS" },
+    ],
+  },
 ];

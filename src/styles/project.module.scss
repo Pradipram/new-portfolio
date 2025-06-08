@@ -23,7 +23,8 @@
 
     .skills {
       display: flex;
-      flex-wrap: wrap;
+      overflow-x: hidden;
+      // flex-wrap: wrap;
       //   margin: 5px;
     }
 
