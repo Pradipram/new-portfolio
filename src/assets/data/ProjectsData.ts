@@ -11,6 +11,11 @@ import {
   neonImage,
   nextJsIconWhite480,
   tailwindcssIconWhite384,
+  movieRecommendationImage,
+  pythonIcon240,
+  streamlitIcon480,
+  numpyIcon480,
+  pandasIcon480,
 } from "../images";
 
 export interface ProjectLinkInterface {
@@ -100,6 +105,28 @@ export const projectData: ProjectData = [
       { src: postgresImage480, name: "PostgreSQL" },
       { src: neonImage, name: "Neon" },
       { src: tailwindcssIconWhite384, name: "Tailwind CSS" },
+    ],
+  },
+  {
+    id: 4,
+    name: "movie-recommendation-system",
+    description: "This is ml model to give you the best five similar movies.",
+    image: movieRecommendationImage,
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/Pradipram/movie-recommendation",
+      },
+      {
+        name: "Live",
+        url: "https://pradip-movie-recommendation.streamlit.app/",
+      },
+    ],
+    skills: [
+      { src: pythonIcon240, name: "Python" },
+      { src: streamlitIcon480, name: "Streamlit" },
+      { src: numpyIcon480, name: "NumPy" },
+      { src: pandasIcon480, name: "Pandas" },
     ],
   },
 ];
