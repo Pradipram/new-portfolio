@@ -44,13 +44,14 @@ const Project: FC<ProjectProps> = ({ project }) => {
           height={140}
         />
         <CardContent sx={{ padding: 0, marginTop: "10px" }}>
-          <Typography
-            gutterBottom
-            variant="h5"
-            //   component="div"
-            sx={{ margin: 0 }}
-          >
-            {project.name}
+          <Typography gutterBottom variant="h5" sx={{ margin: 0 }}>
+            {project.name.length <= 20 ? (
+              project.name
+            ) : (
+              <span className={projectsStyle.slidingHeading}>
+                {project.name}
+              </span>
+            )}
           </Typography>
           <Typography
             sx={{ minHeight: "4.5em", display: "block" }}
