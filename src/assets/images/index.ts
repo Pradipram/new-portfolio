@@ -28,12 +28,15 @@ export { default as pythonIcon240 } from "./icons8-python-240.png";
 export { default as streamlitIcon480 } from "./icons8-streamlit-480.png";
 export { default as numpyIcon480 } from "./icons8-numpy-480.png";
 export { default as pandasIcon480 } from "./icons8-pandas-480.png";
+export { default as npmIcon480 } from "./icons8-npm-480.png";
+export { default as webpackIcon96 } from "./icons8-webpack-96.png";
 
 //projects images
 export { default as elitbazzarImage } from "./elitebazzar.png";
 export { default as writeStreamImage } from "./write-stream.png";
 export { default as codeSnippetsImage } from "./code-snippets.png";
 export { default as movieRecommendationImage } from "./movie-recomendation-system.png";
+export { default as reactFooterImage } from "./react-footer.png";
 
 //experiences
 export { default as veoliaLogo } from "./veolia_water_technologies_and_solutions_logo.jpeg";

@@ -16,6 +16,10 @@ import {
   streamlitIcon480,
   numpyIcon480,
   pandasIcon480,
+  reactFooterImage,
+  typescriptImage,
+  npmIcon480,
+  webpackIcon96,
 } from "../images";
 
 export interface ProjectLinkInterface {
@@ -127,6 +131,31 @@ export const projectData: ProjectData = [
       { src: streamlitIcon480, name: "Streamlit" },
       { src: numpyIcon480, name: "NumPy" },
       { src: pandasIcon480, name: "Pandas" },
+    ],
+  },
+  {
+    id: 5,
+    name: "React-Footer",
+    description:
+      "A customizable React component for displaying a footer with dynamic website name, custom classes, and styles.",
+    image: reactFooterImage,
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/Pradipram/React-Footer",
+      },
+      {
+        name: "about",
+        url: "https://www.npmjs.com/package/@p__radip/react-footer",
+      },
+    ],
+    skills: [
+      { src: ReactIocn, name: "React" },
+      { src: nextJsIconWhite480, name: "Next.js" },
+      { src: tailwindcssIconWhite384, name: "Tailwind CSS" },
+      { src: typescriptImage, name: "TypeScript" },
+      { src: npmIcon480, name: "NPM" },
+      { src: webpackIcon96, name: "Webpack" },
     ],
   },
 ];
